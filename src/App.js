@@ -1,11 +1,12 @@
 export default function App() {
   return (
     <div>
-      <Hello />
+      <Hello name="gaurav" />
     </div>
   );
 }
 
-function Hello() {
-  return <h1> Hello world</h1>;
+//with destructuring
+function Hello({ name }) {
+  return <h1> Hello{name}</h1>;
 }
