@@ -9,28 +9,21 @@ export default function App() {
 }
 
 function Hello() {
-  let counter = 100;
-  const like = () => {
-    counter++;
-    console.log(counter);
-  };
+  const [username, setUsername] = useState("");
 
-  let [counter1, setCounter1] = useState(100);
-  const like1 = () => {
-    const newCounter1 = counter1 + 1;
-    setCounter1(newCounter1);
+  const handleUser = (e) => {
+    const newUsername = e.target.value;
+    setUsername(newUsername);
   };
-
   return (
     <div>
-      <h1>
-        {counter}
-        <button onClick={like}>Like</button>
-      </h1>
-      <h1>
-        counter1: {counter1}
-        <button onClick={like1}>Like1</button>
-      </h1>
+      <input type="text" value={username} onChange={handleUser} />
+
+      <h1>{username}</h1>
+      <hr />
+      <h1>{username}</h1>
+      <hr />
+      <h1>{username}</h1>
     </div>
   );
 }
